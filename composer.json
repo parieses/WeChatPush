@@ -1,0 +1,28 @@
+{
+    "name": "parieses/wechatpush",
+    "description": "Yii2 parieses wechatpush",
+    "homepage": "https://github.com/parieses/WeChatPush",
+    "type": "library",
+    "support": {
+      "source": "https://github.com/parieses/WeChatPush"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mr. 亮先生",
+            "email": "1695699447@qq.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+      "php": ">=7.0.0"
+    },
+    "config": {
+      "process-timeout": 1800
+    },
+    "autoload": {
+      "psr-4": {
+        "WeChatPush\\": "src/"
+      }
+    }
+}

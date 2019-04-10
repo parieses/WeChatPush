@@ -19,13 +19,20 @@ class WeChatPush{
      * @param array $config
      * @param array $data
      */
-    public function __construct($type,array $config,array$data)
+    public function __construct($type,array $config)
     {
         $this->type = $type;
         $this->config = $config;
-        $this->data = $data;
-        self::getUrl();
         self::initAccess_token();
+        self::getUrl();
+    }
+
+    /**
+     * @param array $data
+     */
+    public function setData($data)
+    {
+        $this->data = $data;
     }
     public function Push(){
         return self::https_curl_json($this->sendUrl,$this->data,'json');
